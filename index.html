@@ -5,24 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExitRight | Privacy-First Subscription Management</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FIXED FONT LINK -->
     <link href="fonts.googleapis.com" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #0f1115; color: #ffffff; }
         .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .blue-gradient { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
-        
-        /* ExitRight Logo Construction */
         .logo-container { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.5rem; letter-spacing: -0.05em; }
         .logo-square { width: 34px; height: 34px; background: #3b82f6; border-radius: 8px; display: flex; align-items: center; justify-content: center; position: relative; }
         .logo-c { color: white; font-size: 1.2rem; position: relative; left: 1px; }
         .logo-arrow { position: absolute; width: 0; height: 0; border-top: 4px solid transparent; border-bottom: 4px solid transparent; border-right: 6px solid white; left: 10px; }
-        
         html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Navbar -->
     <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
         <div class="logo-container">
             <span>ExitRight</span>
@@ -40,7 +37,6 @@
         </a>
     </nav>
 
-    <!-- Hero Section -->
     <header class="container mx-auto px-6 pt-16 pb-24 text-center">
         <div class="inline-block px-4 py-1.5 mb-6 rounded-full glass-card text-xs font-bold text-blue-400 uppercase tracking-widest">
             2025 New Release
@@ -52,7 +48,6 @@
             The manual subscription tracker for people who value privacy. No bank connections. Just smart reminders and professional cancellation templates.
         </p>
 
-        <!-- App UI Preview -->
         <div class="max-w-md mx-auto glass-card rounded-[2.5rem] p-8 text-left relative overflow-hidden">
             <div class="flex justify-between items-center mb-6">
                 <h3 class="font-bold text-xl">Subscriptions</h3>
@@ -79,7 +74,6 @@
         </div>
     </header>
 
-    <!-- Content Sections -->
     <section id="features" class="container mx-auto px-6 py-20 grid md:grid-cols-3 gap-12 border-t border-white/5">
         <div class="space-y-4">
             <div class="w-12 h-12 rounded-2xl blue-gradient flex items-center justify-center text-xl">🛡️</div>
@@ -98,14 +92,13 @@
         </div>
     </section>
 
-    <!-- Sign Up / Waitlist -->
     <section id="waitlist" class="container mx-auto px-6 py-24">
         <div class="glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
             <div class="absolute -top-24 -right-24 w-64 h-64 bg-blue-600/10 blur-[100px]"></div>
             <h2 class="text-4xl font-extrabold mb-4">Ready to ExitRight?</h2>
             <p class="text-gray-400 mb-10 max-w-lg mx-auto">Join the waitlist for early access to the manual subscription manager that puts you back in charge.</p>
             
-            <!-- INTEGRATED MAILCHIMP FORM -->
+            <!-- FIXED INTEGRATED MAILCHIMP FORM -->
             <form 
                 action="gmail.us8.list-manage.com" 
                 method="post" 
@@ -123,7 +116,6 @@
                     class="flex-1 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition text-white"
                 >
                 
-                <!-- Anti-Spam (Honeypot) Field -->
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                     <input type="text" name="b_d5b5768e96fe15926b405e771_282fc4ea36" tabindex="-1" value="">
                 </div>
@@ -137,8 +129,6 @@
                     Notify Me
                 </button>
             </form>
-            <!-- END MAILCHIMP FORM -->
-
         </div>
     </section>
 
