@@ -12,10 +12,12 @@
         .blue-gradient { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
         
         /* ExitRight Logo Construction */
-        .logo-container { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.5rem; tracking: -0.05em; }
+        .logo-container { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.5rem; letter-spacing: -0.05em; }
         .logo-square { width: 34px; height: 34px; background: #3b82f6; border-radius: 8px; display: flex; align-items: center; justify-content: center; position: relative; }
         .logo-c { color: white; font-size: 1.2rem; position: relative; left: 1px; }
         .logo-arrow { position: absolute; width: 0; height: 0; border-top: 4px solid transparent; border-bottom: 4px solid transparent; border-right: 6px solid white; left: 10px; }
+        
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="antialiased">
@@ -96,16 +98,47 @@
         </div>
     </section>
 
-    <!-- Sign Up -->
+    <!-- Sign Up / Waitlist -->
     <section id="waitlist" class="container mx-auto px-6 py-24">
         <div class="glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
             <div class="absolute -top-24 -right-24 w-64 h-64 bg-blue-600/10 blur-[100px]"></div>
             <h2 class="text-4xl font-extrabold mb-4">Ready to ExitRight?</h2>
             <p class="text-gray-400 mb-10 max-w-lg mx-auto">Join the waitlist for early access to the manual subscription manager that puts you back in charge.</p>
-            <form class="max-w-md mx-auto flex flex-col md:flex-row gap-3">
-                <input type="email" placeholder="Enter your email" required class="flex-1 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition">
-                <button type="submit" class="blue-gradient px-8 py-4 rounded-2xl font-bold hover:brightness-110 transition">Notify Me</button>
+            
+            <!-- INTEGRATED MAILCHIMP FORM -->
+            <form 
+                action="gmail.us8.list-manage.com" 
+                method="post" 
+                id="mc-embedded-subscribe-form" 
+                name="mc-embedded-subscribe-form" 
+                target="_blank" 
+                class="max-w-md mx-auto flex flex-col md:flex-row gap-3"
+            >
+                <input 
+                    type="email" 
+                    name="EMAIL" 
+                    id="mce-EMAIL" 
+                    placeholder="Enter your email" 
+                    required 
+                    class="flex-1 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition text-white"
+                >
+                
+                <!-- Anti-Spam (Honeypot) Field -->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_d5b5768e96fe15926b405e771_282fc4ea36" tabindex="-1" value="">
+                </div>
+
+                <button 
+                    type="submit" 
+                    name="subscribe" 
+                    id="mc-embedded-subscribe" 
+                    class="blue-gradient px-8 py-4 rounded-2xl font-bold hover:brightness-110 transition"
+                >
+                    Notify Me
+                </button>
             </form>
+            <!-- END MAILCHIMP FORM -->
+
         </div>
     </section>
 
@@ -115,4 +148,3 @@
 
 </body>
 </html>
-
